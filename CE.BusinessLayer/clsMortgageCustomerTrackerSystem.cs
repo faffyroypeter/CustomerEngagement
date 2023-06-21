@@ -13,6 +13,7 @@ namespace CE.Business
     {
         private clsSqlServerDBContext objSqlDBContext = new clsSqlServerDBContext();
 
+
         public clsMortgageCustomerTrackerSystem() { }
 
         public bool AddCustomer(Customer objCustomer)
