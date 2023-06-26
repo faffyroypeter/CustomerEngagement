@@ -1,12 +1,14 @@
 ﻿namespace CE.DataAccess
 {
     using CE.Model;
+    using System.Data;
     using System.Data.Sql;
+
+    // sql server only
     using System.Data.SqlClient;
 
     public class clsSqlServerDBContext
     {
-
         // Connect to Database
 
         // 1. Require a Connection String (database server name, database name, credential optionally, other attributes)
@@ -47,7 +49,7 @@
 
             int resultsAffected = objSqlCommand.ExecuteNonQuery();
 
-            if(objSqlConnection.State == System.Data.ConnectionState.Open)
+            if (objSqlConnection.State == System.Data.ConnectionState.Open)
             {
                 // 4. Close the connection:
                 objSqlConnection.Close();
@@ -56,5 +58,29 @@
             return resultsAffected;
         }
 
+        public DataTable FetchCustomers()
+        {
+            // 1.Initialize connection with database with connectionstring copied from database explorer
+            SqlConnection objSqlConnection = new SqlConnection(ConnStr);
+
+            // 2. Open the connection with database
+            objSqlConnection.Open();
+
+            string query = "SELECT FirstName,LastName,Age,LoanAmount FROM tblCustomer ";
+
+
+            SqlCommand objSqlCommand = new SqlCommand(query, objSqlConnection);
+            objSqlCommand.CommandType = System.Data.CommandType.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(objSqlCommand);
+
+            DataSet dsResults = new DataSet("PeterDataSet");
+
+            // Executes and selects as per the command provided above
+            adapter.Fill(dsResults);
+
+            // Return the results to the calling method
+            return dsResults.Tables[0];         
+        }
     }
 }

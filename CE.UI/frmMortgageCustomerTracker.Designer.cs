@@ -41,7 +41,9 @@
             this.lblAge = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblCustomerFirstName = new System.Windows.Forms.Label();
+            this.dgvCustomer = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -183,16 +185,28 @@
             this.lblCustomerFirstName.TabIndex = 0;
             this.lblCustomerFirstName.Text = "First Name";
             // 
+            // dgvCustomer
+            // 
+            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomer.Location = new System.Drawing.Point(677, 32);
+            this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.RowHeadersWidth = 51;
+            this.dgvCustomer.RowTemplate.Height = 29;
+            this.dgvCustomer.Size = new System.Drawing.Size(704, 288);
+            this.dgvCustomer.TabIndex = 1;
+            // 
             // frmCustomerInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 347);
+            this.ClientSize = new System.Drawing.Size(1422, 347);
+            this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCustomerInformation";
             this.Text = "Mortgage Customer Tracker";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,5 +226,6 @@
         private Label label3;
         private Label label2;
         private Button button1;
+        private DataGridView dgvCustomer;
     }
 }

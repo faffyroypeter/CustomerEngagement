@@ -59,6 +59,9 @@ namespace CE.UI
             if (status)
             {
                 MessageBox.Show("Record Saved");
+                
+                 var result = objMortgageCusTrackSystem.FetchCustomers();
+                dgvCustomer.DataSource = result;                    
             }
         }
     }

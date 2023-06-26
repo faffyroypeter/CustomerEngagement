@@ -6,14 +6,13 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace CE.Business
 {
     public class clsMortgageCustomerTrackerSystem
     {
         private clsSqlServerDBContext objSqlDBContext = new clsSqlServerDBContext();
-
-
         public clsMortgageCustomerTrackerSystem() { }
 
         public bool AddCustomer(Customer objCustomer)
@@ -38,6 +37,11 @@ namespace CE.Business
         //public int GetCustomerCount() { }
         //public int GetCustomerId() { }
         //public string GetCustomerName() { }
+
+        public DataTable FetchCustomers()
+        {
+            return objSqlDBContext.FetchCustomers();
+        }
 
     }
 }
