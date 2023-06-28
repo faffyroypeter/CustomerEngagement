@@ -7,6 +7,14 @@
     "storage1": {
       "type": "storage",
       "connectionId": "AzureWebJobsStorage"
+    },
+    "secrets1": {
+      "type": "secrets"
+    },
+    "storage2": {
+      "type": "storage",
+      "connectionId": "DefaultEndpointsProtocol=https;AccountName=stroageaccountnafinterns;AccountKey=5K3zoBHF2ySHBW+sF1HBei/zBxriV2Q8vlrErLjDOXlRVfdY9vjXKKQLPSQ4Ix82HLqzzMQ8fnE4+AStqDJDSA==;EndpointSuffix=core.windows.net",
+      "dynamicId": null
     }
   }
 }
