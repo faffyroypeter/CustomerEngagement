@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CE.CustomerEngagementWebMVC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CE.CheckBalance", "CE.CheckBalance\CE.CheckBalance.csproj", "{B7C0C88B-B01E-4A2B-9575-DCB7469AA505}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CE.CustomerEngagementApi", "CE.CustomerEngagementApi\CE.CustomerEngagementApi.csproj", "{1A5F7E51-9B80-4D11-A81D-3D599227B521}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B7C0C88B-B01E-4A2B-9575-DCB7469AA505}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7C0C88B-B01E-4A2B-9575-DCB7469AA505}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7C0C88B-B01E-4A2B-9575-DCB7469AA505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5F7E51-9B80-4D11-A81D-3D599227B521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5F7E51-9B80-4D11-A81D-3D599227B521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5F7E51-9B80-4D11-A81D-3D599227B521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5F7E51-9B80-4D11-A81D-3D599227B521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
