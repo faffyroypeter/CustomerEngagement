@@ -31,23 +31,23 @@ namespace CE.CheckBalance
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
 
-            var result= objReftoDAL.FetchCustomers();
+            //var result= objReftoDAL.FetchCustomers();
 
 
             //var customerNames = string.Empty;
 
             // Iterate the values in a collction
-            foreach(DataRow row in result.Rows) 
-            {
+            //foreach(DataRow row in result.Rows) 
+            //{
 
-                if (row["FirstName"].ToString().Equals(name))
-                {
-                    return new OkObjectResult("I have found a customer named: " + row["FirstName"].ToString());
-                }
+            //    if (row["FirstName"].ToString().Equals(name))
+            //    {
+            //        return new OkObjectResult("I have found a customer named: " + row["FirstName"].ToString());
+            //    }
 
-                // obtain the currentrow
-               // customerNames += row["FirstName"];
-            }
+            //    // obtain the currentrow
+            //   // customerNames += row["FirstName"];
+            //}
 
            
 
