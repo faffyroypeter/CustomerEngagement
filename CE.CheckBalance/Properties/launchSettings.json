@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "CE.CheckBalance": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7107",
+      "launchBrowser": false
+    }
+  }
+}
