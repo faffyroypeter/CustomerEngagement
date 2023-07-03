@@ -1,4 +1,4 @@
-using CE.CustomerEngagementApi.DAL;
+using CE.WebApiSample.DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,10 +10,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Injecting DbContext with InMemoryDB with DB Name
-//builder.Services.AddDbContext<CustomerDBContext>(options => options.UseInMemoryDatabase("CustomerEnagementDB"));
-builder.Services.AddDbContext<CustomerDBContext>(options => options.UseSqlServer(
-    builder.Configuration.GetConnectionString("sqlConn")));
+// 1.nuget -> Microoft.EntityFramework.Core
+// 2.nuget -> Microsoft.Frameworkcore.ImMemory -> Package 
+
+//builder.Services.AddDbContext<EmployeeDBContext>(options => options.UseInMemoryDatabase("EmployeeDB"));
+builder.Services.AddDbContext<EmployeeDBContext>(options => options.UseSqlServer(
+
+    builder.Configuration.GetConnectionString("NafTeam2ConnString"))
+
+);
 
 var app = builder.Build();
 
